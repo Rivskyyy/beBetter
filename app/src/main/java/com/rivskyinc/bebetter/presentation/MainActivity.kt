@@ -1,7 +1,8 @@
-package com.rivskyinc.bebetter
+package com.rivskyinc.bebetter.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.rivskyinc.bebetter.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
