@@ -1,6 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
+
 }
 
 android {
@@ -36,12 +39,14 @@ android {
 }
 
 dependencies {
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation("com.google.firebase:firebase-analytics")
 
-    implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-analytics-ktx")
 
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation("com.google.firebase:firebase-crashlytics:18.6.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.16.1")
 
     //Retrofit
