@@ -1,4 +1,4 @@
-package com.rivskyinc.bebetter.presentation.viewModel
+package com.rivskyinc.bebetter.presentation.mainFragment.viewModel
 
 import android.util.Log
 import androidx.lifecycle.LiveData

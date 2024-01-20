@@ -1,4 +1,4 @@
-package com.rivskyinc.bebetter.presentation.viewModel
+package com.rivskyinc.bebetter.presentation.mainFragment.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
