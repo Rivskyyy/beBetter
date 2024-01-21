@@ -19,7 +19,6 @@ import java.util.LinkedList
 import javax.inject.Inject
 
 
-
 class MainFragment : Fragment() {
 
     private lateinit var binding: FragmentMainBinding
@@ -49,7 +48,7 @@ class MainFragment : Fragment() {
         component.inject(this)
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
-        //  loadData()
+        loadData()
 
         binding.progressBar.visibility = View.GONE
     }
@@ -65,13 +64,18 @@ class MainFragment : Fragment() {
             }
 
         }
+        viewModel.quote.observe(viewLifecycleOwner){
+            if ( it!= null ){
+                binding.textViewQuote.text = it.text
+            }
+        }
     }
 
 
     private fun launchDetailFragment(detailFragment: DetailFragment) {
         val fragmentManager = this.requireActivity().supportFragmentManager
         fragmentManager.beginTransaction()
-            .add(
+            .replace(
                 R.id.main_container,
                 detailFragment
             )
@@ -84,9 +88,9 @@ class MainFragment : Fragment() {
         binding.recyclerViewMain.apply {
             myAdapter = MyListAdapter { post, position ->
                 val detailFragment = DetailFragment.newInstance(
-                   post.title!!,
-                    post.thumbnail!!,
-                    post.text!!,
+                    post.title,
+                    post.thumbnail,
+                    post.text,
                     position,
                     LinkedList(myAdapter.currentList)
                 )
