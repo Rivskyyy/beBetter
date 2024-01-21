@@ -46,6 +46,8 @@ dependencies {
 
     // Dagger 2
     implementation("com.google.dagger:hilt-android:2.48")
+    implementation("com.google.firebase:firebase-database-ktx:20.3.0")
+    implementation("com.google.firebase:firebase-firestore-ktx:24.10.1")
     kapt("com.google.dagger:hilt-android-compiler:2.48")
     implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
@@ -57,8 +59,9 @@ dependencies {
 
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.16.0")
-    implementation("com.google.firebase:firebase-crashlytics:18.6.0")
-    annotationProcessor ("com.github.bumptech.glide:compiler:4.16.1")
+//    implementation ("com.github.bumptech.glide:glide:4.16.0")
+//    implementation("com.google.firebase:firebase-crashlytics:18.6.0")
+//    annotationProcessor ("com.github.bumptech.glide:compiler:4.16.1")
 
     //Retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
