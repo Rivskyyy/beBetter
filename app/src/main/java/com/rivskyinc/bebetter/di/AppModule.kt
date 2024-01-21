@@ -2,8 +2,11 @@ package com.rivskyinc.bebetter.di
 
 import com.rivskyinc.bebetter.Utils.BASE_URL
 import com.rivskyinc.bebetter.data.BlogApi
-import com.rivskyinc.bebetter.data.repositoryImpl.BlogRepositoryImpl
-import com.rivskyinc.bebetter.domain.BlogRepository
+
+
+import com.rivskyinc.bebetter.data.repositoryImpl.FirebaseImpl
+
+import com.rivskyinc.bebetter.domain.FirebaseApi
 import com.rivskyinc.bebetter.domain.useCases.GetPostsUseCase
 import dagger.Module
 import dagger.Provides
@@ -18,24 +21,27 @@ import javax.inject.Singleton
 object AppModule {
 
 
+//    @Provides
+//    @Singleton
+//    fun provideMyApi(): BlogApi {
+//        return Retrofit.Builder()
+//            .baseUrl(BASE_URL)
+//            .addConverterFactory(GsonConverterFactory.create())
+//            .build()
+//            .create(BlogApi::class.java)
+//    }
+
     @Provides
-    @Singleton
-    fun provideMyApi(): BlogApi {
-        return Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(BlogApi::class.java)
+    fun provideFirebaseApi(): FirebaseApi {
+        return FirebaseImpl()
     }
-
-
-    @Provides
-    fun bindsRepository(api: BlogApi): BlogRepository {
-        return BlogRepositoryImpl(api)
-    }
+//    @Provides
+//    fun bindsRepository(api: BlogApi): BlogRepository {
+//        return BlogRepositoryImpl(api)
+//    }
 
     @Provides
-    fun providesUseCase(repository: BlogRepository): GetPostsUseCase {
+    fun providesUseCase(repository: FirebaseApi): GetPostsUseCase {
         return GetPostsUseCase(repository)
     }
 
