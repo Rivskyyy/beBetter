@@ -1,20 +1,16 @@
 package com.rivskyinc.bebetter.di
 
-import com.rivskyinc.bebetter.Utils.BASE_URL
-import com.rivskyinc.bebetter.data.BlogApi
 
 
 import com.rivskyinc.bebetter.data.repositoryImpl.FirebaseImpl
 
 import com.rivskyinc.bebetter.domain.FirebaseApi
-import com.rivskyinc.bebetter.domain.useCases.GetPostsUseCase
+
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Singleton
+
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -40,10 +36,10 @@ object AppModule {
 //        return BlogRepositoryImpl(api)
 //    }
 
-    @Provides
-    fun providesUseCase(repository: FirebaseApi): GetPostsUseCase {
-        return GetPostsUseCase(repository)
-    }
+//    @Provides
+//    fun providesUseCase(repository: FirebaseApi): GetPostsUseCase {
+//        return GetPostsUseCase(repository)
+//    }
 
 
 }

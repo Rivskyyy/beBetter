@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.rivskyinc.bebetter.R
 import com.rivskyinc.bebetter.databinding.FragmentMainBinding
 import com.rivskyinc.bebetter.presentation.BlogApplication
@@ -57,7 +58,7 @@ class MainFragment : Fragment() {
 
         viewModel.postsList.observe(viewLifecycleOwner) {
             if (it != null) {
-                myAdapter.submitList(listOf(it))
+                myAdapter.submitList(it)
             } else {
                 binding.progressBar.visibility = View.VISIBLE
                 Toast.makeText(this.context, "No Internet connection", Toast.LENGTH_LONG).show()
@@ -97,7 +98,7 @@ class MainFragment : Fragment() {
                 launchDetailFragment(detailFragment)
             }
             adapter = myAdapter
-            layoutManager = GridLayoutManager(context, 3)
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false )
         }
     }
 }
