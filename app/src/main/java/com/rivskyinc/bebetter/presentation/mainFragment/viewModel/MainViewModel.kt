@@ -8,8 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.rivskyinc.bebetter.domain.FirebaseApi
 import com.rivskyinc.bebetter.domain.entities.Blog
 import com.rivskyinc.bebetter.domain.entities.Quotes
-import com.rivskyinc.bebetter.domain.useCases.GetPostsUseCase
-import com.rivskyinc.bebetter.domain.useCases.GetQuoteUseCase
+
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -20,8 +19,8 @@ class MainViewModel @Inject constructor(
 
 ): ViewModel() {
 
-    private var _postsList= MutableLiveData<Blog>()
-    val postsList : LiveData<Blog> = _postsList
+    private var _postsList= MutableLiveData<List<Blog>>()
+    val postsList : LiveData<List<Blog>> = _postsList
 
     private var _quote= MutableLiveData<Quotes>()
     val quote : LiveData<Quotes> = _quote
