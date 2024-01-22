@@ -46,7 +46,7 @@ class DetailFragment : Fragment() {
         private const val POSITION = "position"
 
         @JvmStatic
-        fun newInstance(title: String, image : String,  text: String, position : Int,
+        fun newInstance(title: String?, image : String?,  text: String?, position : Int,
                         postsList: LinkedList<Blog>
         ) =
             DetailFragment().apply {

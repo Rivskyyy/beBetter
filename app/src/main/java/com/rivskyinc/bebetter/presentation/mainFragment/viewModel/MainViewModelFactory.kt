@@ -3,8 +3,6 @@ package com.rivskyinc.bebetter.presentation.mainFragment.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.rivskyinc.bebetter.domain.FirebaseApi
-import com.rivskyinc.bebetter.domain.useCases.GetPostsUseCase
-import com.rivskyinc.bebetter.domain.useCases.GetQuoteUseCase
 import javax.inject.Inject
 
 class MainViewModelFactory @Inject constructor(
