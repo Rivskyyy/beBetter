@@ -15,11 +15,17 @@ class FirebaseImpl() : FirebaseApi {
              .getInstance("https://bebetter-703b7-default-rtdb.europe-west1.firebasedatabase.app")
              .getReference("Quotes")
 
-        override suspend fun getPosts(): Blog {
+        override suspend fun getPosts(): MutableList<Blog>{
             try {
+                val blogList = mutableListOf<Blog>()
                 val dataSnapshot = refPosts.get().await()
-                val posts = dataSnapshot.getValue(Blog::class.java)
-                return posts ?: throw ApiException("Дані відсутні або невірні")
+                for (postSnapshot in dataSnapshot.children) {
+                    val post = postSnapshot.getValue(Blog::class.java)
+                    post?.let {
+                        blogList.add(it)
+                    }
+                }
+                return blogList ?: throw ApiException("Дані відсутні або невірні")
 
             } catch (e: Exception) {
                 throw ApiException("Помилка отримання постів: ${e.message}")
