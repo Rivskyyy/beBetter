@@ -67,6 +67,7 @@ class MainFragment : Fragment() {
         viewModel.quote.observe(viewLifecycleOwner){
             if ( it!= null ){
                 binding.textViewQuote.text = it.text
+                binding.textViewAuthorQ.text = it.author
             }
         }
     }

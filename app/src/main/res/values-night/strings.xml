@@ -2,4 +2,5 @@
 <resources>
     <string name="imageViewPost">Image Title</string>
     <string name="title_default">title_default</string>
+    <string name="button_back"><![CDATA[<]]></string>
 </resources>

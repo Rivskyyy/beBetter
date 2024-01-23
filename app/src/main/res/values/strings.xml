@@ -10,5 +10,9 @@
         dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
     <string name="title_default">title_default</string>
+    <string name="author">author</string>
+    <string name="quote">quote</string>
+    <string name="be_better">be Better</string>
+    <string name="button_back"><![CDATA[<]]></string>
 
 </resources>
