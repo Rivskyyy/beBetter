@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_fragment"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.mainFragment.MainFragment"
-    android:background="@color/white"
     android:layout_gravity="center"
+
     android:orientation="vertical"
-    app:cardBackgroundColor="@color/silver_white"
+    tools:context=".presentation.mainFragment.MainFragment"
+
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,17 +25,13 @@
             android:layout_marginTop="10sp"
             android:fontFamily="@font/aboreto_regular"
             android:gravity="center"
-            android:text="be Better "
-            android:textColor="@color/black"
+            android:text="@string/be_better"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -44,12 +40,23 @@
         android:id="@+id/textViewQuote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="quote"
         android:layout_gravity="center"
-        android:textSize="20sp"
-        android:layout_margin="10dp"
+        android:layout_margin="15dp"
         android:fontFamily="@font/aboreto_regular"
-        />
+        android:text="@string/quote"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewAuthorQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/aboreto_regular"
+        android:text="@string/author"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
     <androidx.recyclerview.widget.RecyclerView
 
 
@@ -76,7 +83,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
-
 
 
 </LinearLayout>
