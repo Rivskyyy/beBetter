@@ -25,10 +25,10 @@ class FirebaseImpl() : FirebaseApi {
                         blogList.add(it)
                     }
                 }
-                return blogList ?: throw ApiException("Дані відсутні або невірні")
+                return blogList
 
             } catch (e: Exception) {
-                throw ApiException("Помилка отримання постів: ${e.message}")
+                throw ApiException("Posts acquisition problems : ${e.message}")
             }
         }
 
@@ -41,7 +41,7 @@ class FirebaseImpl() : FirebaseApi {
                 return quotes ?: throw ApiException("Дані відсутні або невірні")
 
             } catch (e: Exception) {
-                throw ApiException("Помилка отримання цитат: ${e.message}")
+                throw ApiException("Quotes acquisition problems: ${e.message}")
             }
         }
     }
