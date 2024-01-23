@@ -48,11 +48,21 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        binding.onBackButton.setOnClickListener {
-//            activity?.onBackPressed()
-//        }
+
+        buttonOnBack()
         setData()
+        progressBarMode()
+
+    }
+
+    private fun progressBarMode() {
         binding.progressBar.visibility = View.GONE
+    }
+
+    private fun buttonOnBack() {
+        binding.buttonOnBack.setOnClickListener {
+            activity?.onBackPressed()
+        }
     }
 
     private fun setData() {
