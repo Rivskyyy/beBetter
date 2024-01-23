@@ -7,12 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rivskyinc.bebetter.R
 import com.rivskyinc.bebetter.databinding.FragmentMainBinding
 import com.rivskyinc.bebetter.presentation.BlogApplication
-import com.rivskyinc.bebetter.presentation.DetailFragment
+import com.rivskyinc.bebetter.presentation.detailFragment.DetailFragment
 import com.rivskyinc.bebetter.presentation.adapter.MyListAdapter
 import com.rivskyinc.bebetter.presentation.mainFragment.viewModel.MainViewModel
 import com.rivskyinc.bebetter.presentation.mainFragment.viewModel.MainViewModelFactory
@@ -93,7 +92,6 @@ class MainFragment : Fragment() {
                     post.thumbnail,
                     post.text,
                     position,
-                    LinkedList(myAdapter.currentList)
                 )
                 launchDetailFragment(detailFragment)
             }
