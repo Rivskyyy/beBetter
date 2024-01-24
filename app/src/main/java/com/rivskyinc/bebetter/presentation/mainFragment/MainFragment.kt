@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,7 +16,6 @@ import com.rivskyinc.bebetter.presentation.detailFragment.DetailFragment
 import com.rivskyinc.bebetter.presentation.adapter.MyListAdapter
 import com.rivskyinc.bebetter.presentation.mainFragment.viewModel.MainViewModel
 import com.rivskyinc.bebetter.presentation.mainFragment.viewModel.MainViewModelFactory
-import java.util.LinkedList
 import javax.inject.Inject
 
 
@@ -50,8 +50,10 @@ class MainFragment : Fragment() {
         setupRecyclerView()
         loadData()
 
-        binding.progressBar.visibility = View.GONE
+        //binding.progressBar.visibility = View.GONE
     }
+
+
 
     private fun loadData() {
 
@@ -59,9 +61,12 @@ class MainFragment : Fragment() {
             if (it != null) {
                 myAdapter.submitList(it)
             } else {
-                binding.progressBar.visibility = View.VISIBLE
+
+             //   binding.progressBar.visibility = View.VISIBLE
                 Toast.makeText(this.context, "No Internet connection", Toast.LENGTH_LONG).show()
             }
+
+
 
         }
         viewModel.quote.observe(viewLifecycleOwner){

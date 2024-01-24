@@ -1,6 +1,7 @@
 package com.rivskyinc.bebetter.presentation.detailFragment
 
 import android.os.Bundle
+import android.text.Html
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,6 +16,7 @@ import com.rivskyinc.bebetter.presentation.BlogApplication
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.json.JSONObject
 import java.util.LinkedList
 import javax.inject.Inject
 
@@ -49,6 +51,7 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         buttonOnBack()
         setData()
         progressBarMode()
@@ -77,7 +80,10 @@ class DetailFragment : Fragment() {
     }
 
     private fun setText() {
-        binding.tvPost.text = getPostText.toString()
+
+        val jsonString = getPostText
+       // binding.tvPost.text = getPostText
+        binding.tvPost.text = Html.fromHtml(jsonString, Html.FROM_HTML_MODE_COMPACT)
     }
 
     private fun setImage() {
