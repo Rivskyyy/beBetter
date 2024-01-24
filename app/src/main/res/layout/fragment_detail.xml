@@ -71,8 +71,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:textSize="30sp"
+                android:fontFamily="@font/roboto_black"
                 tools:text="@string/title_default" />
 
             <TextView
@@ -80,7 +82,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
-                android:textSize="30sp"
+                android:textSize="17sp"
+                android:fontFamily="@font/aboreto_regular"
                 tools:text="@string/text_default" />
 
 
