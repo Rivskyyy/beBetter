@@ -83,8 +83,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
                 android:textSize="17sp"
-                android:fontFamily="@font/aboreto_regular"
+                android:autoLink="none"
                 tools:text="@string/text_default" />
+
 
 
         </LinearLayout>

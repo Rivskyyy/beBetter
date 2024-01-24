@@ -19,15 +19,15 @@
         >
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/app_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10sp"
-            android:fontFamily="@font/aboreto_regular"
+            android:fontFamily="@font/climate"
             android:gravity="center"
             android:text="@string/be_better"
             android:textSize="30sp"
-            android:textStyle="bold"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,10 +41,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:gravity="center_vertical"
         android:layout_margin="15dp"
-        android:fontFamily="@font/aboreto_regular"
+        android:fontFamily="@font/dancing"
         android:text="@string/quote"
-        android:textSize="15sp" />
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/textViewAuthorQ"
@@ -52,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_margin="15dp"
-        android:fontFamily="@font/aboreto_regular"
+        android:fontFamily="@font/dancing"
         android:text="@string/author"
         android:textSize="11sp"
         android:textStyle="bold" />
@@ -72,17 +73,8 @@
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/item_layout" />
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+
+
 
 
 </LinearLayout>
