@@ -59,7 +59,7 @@ class MainFragment : Fragment() {
 
         viewModel.postsList.observe(viewLifecycleOwner) {
             if (it != null) {
-                myAdapter.submitList(it)
+                myAdapter.submitList(it.asReversed())
             } else {
 
              //   binding.progressBar.visibility = View.VISIBLE
