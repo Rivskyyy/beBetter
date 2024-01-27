@@ -1,7 +1,13 @@
-Server-client educational app connected to the Firebase service with configured authentication.
-This app allows you not only to view different  educational videos, but also it is possible to sort
-them by category, comment and rate them.
-Start your self-development  with Vinci.
+
+"be Better" - is a mobile blog app that centers around personal development and life improvement.
+Every day, users can discover new inspiring quotes and diverse posts about personal growth and skill enhancement.
+Server-client app connected to the Firebase
+
+- Clean Architecture 
+- MVVM
+- Firebase (Realm DB)
+- DI (dagger2)
+- Coroutines 
 
 ![imgname](app/images/screen_splash.jpg)
 ![imgname](app/images/screen1.jpg)
